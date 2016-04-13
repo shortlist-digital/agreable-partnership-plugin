@@ -20,8 +20,8 @@
   );
 
   $args = array(
-    'label'               => __('features post', 'text_domain'),
-    'description'         => __('Beautiful editorial longreads', 'text_domain'),
+    'label'               => __('partnership post', 'text_domain'),
+    'description'         => __('Sponsored content creator', 'text_domain'),
     'labels'              => $labels,
     'supports'            => array('title','thumbnail','revisions','author'),
     'taxonomies'          => array('category','post_tag'),
