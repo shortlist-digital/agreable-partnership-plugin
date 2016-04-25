@@ -32,7 +32,7 @@
     'show_in_nav_menus'   => true,
     'show_in_admin_bar'   => true,
     'menu_position'       => 4,
-    'menu_icon'           => 'dashicons-format-quote',
+    'menu_icon'           => 'dashicons-awards',
     'can_export'          => true,
     'has_archive'         => false,
     'exclude_from_search' => false,
