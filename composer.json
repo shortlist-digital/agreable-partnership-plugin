@@ -14,7 +14,7 @@
     "facebook/webdriver": "~1.0",
     "jarednova/mesh": "*",
     "behat/behat": "~2.5",
-    "shortlist-digital/agreable-longform-plugin": "2.*",
+    "shortlist-digital/agreable-longform-plugin": "2.*"
   },
   "config": {
       "bin-dir": "bin/"

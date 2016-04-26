@@ -5,7 +5,7 @@
  * Plugin Name:       Agreable Partnership Plugin
  * Plugin URI:        http://shortlistmedia.co.uk
  * Description:       Created custom partnerships.
- * Version:           0.1.0
+ * Version:           2.0.0
  * Author:            Shortlist Media
  * Author URI:        http://shortlistmedia.co.uk
  * License:           MIT
