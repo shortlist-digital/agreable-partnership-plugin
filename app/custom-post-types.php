@@ -38,11 +38,13 @@
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
     'capability_type' => 'partnership',
+    'capability_type' => 'partnership',
     'capabilities' => array(
       'publish_posts' => 'publish_partnerships',
       'edit_posts' => 'edit_partnerships',
       'edit_others_posts' => 'edit_others_partnerships',
       'delete_posts' => 'delete_partnerships',
+      'delete_private_posts' => 'delete_private_partnerships',
       'delete_others_posts' => 'delete_others_partnerships',
       'read_private_posts' => 'read_private_partnerships',
       'edit_post' => 'edit_partnership',
