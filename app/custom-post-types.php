@@ -38,7 +38,6 @@
     'exclude_from_search' => false,
     'publicly_queryable'  => true,
     'capability_type' => 'partnership',
-    'capability_type' => 'partnership',
     'capabilities' => array(
       'publish_posts' => 'publish_partnerships',
       'edit_posts' => 'edit_partnerships',
