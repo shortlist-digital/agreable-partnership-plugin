@@ -9,9 +9,9 @@ if (!get_role('partnerships_editor')) {
       'Partnerships Editor',
       array(
         'read' => true,
-        'edit_posts' => false,
-        'delete_posts' => false,
-        'publish_posts' => false,
+        'edit_posts' => true,
+        'delete_posts' => true,
+        'publish_posts' => true,
         'upload_files' => true,
       )
     );
@@ -32,6 +32,6 @@ if (!get_role('partnerships_editor')) {
     $role->add_cap('delete_others_partnerships');
     $role->add_cap('delete_private_partnerships');
     $role->add_cap('delete_published_partnerships');
-
+    $role->remove_cap('edit_posts');
   }
 });
