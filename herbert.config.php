@@ -16,6 +16,7 @@ return [
         __DIR__ . '/app/CustomFields/partnership-widgets.php',
         __DIR__ . '/app/CustomFields/partnership-nav.php',
         __DIR__ . '/app/CustomFields/header.php',
+        __DIR__ . '/app/CustomRoles/roles.php',
         __DIR__ . '/app/hooks.php',
     ],
 
