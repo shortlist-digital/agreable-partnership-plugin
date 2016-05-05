@@ -1,6 +1,5 @@
 <?php
 add_action('admin_init', function() {
-remove_role('partnerships_editor');
 if (!get_role('partnerships_editor')) {
     // Add Partnerships editor role
     add_role('partnerships_editor',
