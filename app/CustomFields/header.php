@@ -34,8 +34,14 @@ $brand_image = [
     'class' => 'agreable-options',
   ]
 ];
+foreach($header_acf['fields'] as &$field) {
+  if ($field['key'] === $key . '_type') {
+    $field['choices']['no-header'] = 'No header';
+  }
+}
 
-array_splice($header_acf['fields'], 7, 0, [$brand, $brand_image]);
+$header_acf['fields'][] = $brand;
+$header_acf['fields'][] = $brand_image;
 
 $header_acf = apply_filters('agreable_partnership_plugin_header_acf', $header_acf);
 register_field_group($header_acf);
