@@ -51,8 +51,10 @@
       'read_post' => 'read_partnership',
     ),
     'map_meta_cap' => true,
-    'rewrite' => false,
-    'query_var' => true,
+    'rewrite' => array(
+      'slug' => 'partnership',
+      'with_front' => false
+    )
   );
 
   \register_post_type('partnership', $args);
