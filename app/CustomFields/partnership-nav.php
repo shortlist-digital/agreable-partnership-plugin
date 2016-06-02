@@ -8,62 +8,37 @@ add_action('agreable_app_theme_init', function() {
       'key' => $key,
       'title' => 'Partnership Nav',
       'fields' => array(
+					 array (
+						'key' => $key . '_basic_details_tab',
+						'label' => 'Basic Details',
+						'type' => 'tab',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'placement' => 'left',
+					),
           array(
               'key' => $key . '_logo_button_destination',
               'label' => 'Logo button destination',
-              'name' => 'logo_button_destination',
+              'name' => $key . '_logo_button_destination',
               'type' => 'url',
               'instructions' => 'What URL do you want the logo to go to? (http://)',
               'required' => 1,
               'wrapper' => array(
                   'width' => '50%',
-                  'class' => '',
-                  'id' => ''
               ),
               'placeholder' => 'http://shortlist.com',
               'default_value' => ''
           ),
           array(
-              'key' => $key . '_options',
-              'label' => 'Options',
-              'name' => 'nav_options',
-              'type' => 'checkbox',
-              'required' => 0,
-              'conditional_logic' => 0,
-              'wrapper' => array(
-                  'width' => '50%',
-                  'class' => '',
-                  'id' => ''
-              ),
-              'choices' => array(
-                  '' => ''
-              ),
-              'default_value' => array(
-                  'false' => 'false'
-              ),
-              'layout' => 'vertical'
-          ),
-          array(
               'key' => $key . '_sponsored_text',
               'label' => 'Sponsored Text',
-              'name' => 'sponsored_text',
+              'name' => $key . '_sponsored_text',
               'prefix' => '',
               'type' => 'select',
               'instructions' => 'Select one of the three sponsored content labels',
               'required' => 1,
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              ),
               'wrapper' => array(
-                  'width' => '',
-                  'class' => '',
-                  'id' => ''
+                  'width' => '50%',
               ),
               'choices' => array(
                   'Sponsored By' => 'Sponsored By',
@@ -81,10 +56,18 @@ add_action('agreable_app_theme_init', function() {
               'disabled' => 0,
               'readonly' => 0
           ),
+			 		array (
+						'key' => $key . '_advanced_details_tab',
+						'label' => 'Advanced Details',
+						'type' => 'tab',
+						'required' => 0,
+						'conditional_logic' => 0,
+						'placement' => 'left',
+					),
           array(
               'key' => $key . '_brand_image',
               'label' => 'Brand Image',
-              'name' => 'brand_image',
+              'name' => $key . '_brand_image',
               'type' => 'image',
               'instructions' => 'Add a brand logo',
               'return_format' => 'array',
@@ -95,20 +78,11 @@ add_action('agreable_app_theme_init', function() {
                   'class' => '',
                   'id' => ''
               ),
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              )
           ),
           array(
               'key' => $key . '_brand_name',
               'label' => 'Brand Name',
-              'name' => 'brand_name',
+              'name' => $key . '_brand_name',
               'type' => 'text',
               'instructions' => 'Add brand name',
               'width' => '50',
@@ -118,30 +92,12 @@ add_action('agreable_app_theme_init', function() {
                   'id' => ''
               ),
               'default_value' => '',
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              )
           ),
           array(
-              'key' => $key . '_custom-options',
+              'key' => $key . '_custom_options',
               'label' => 'Custom options',
-              'name' => 'options',
+              'name' => $key . '_custom_options',
               'type' => 'checkbox',
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              ),
               'choices' => array(
                   'show_social' => 'Show social links',
                   'invert_logo' => 'Invert logo'
@@ -160,17 +116,8 @@ add_action('agreable_app_theme_init', function() {
           array(
               'key' => $key . '_background_colour',
               'label' => 'Background Colour',
-              'name' => 'background_colour',
+              'name' => $key . '_background_colour',
               'type' => 'color_picker',
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              ),
               'wrapper' => array(
                   'width' => 33.333,
                   'class' => '',
@@ -181,17 +128,8 @@ add_action('agreable_app_theme_init', function() {
           array(
               'key' => $key . '_text_colour',
               'label' => 'Text Colour',
-              'name' => 'text_colour',
+              'name' => $key . '_text_colour',
               'type' => 'color_picker',
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              ),
               'wrapper' => array(
                   'width' => 33.333,
                   'class' => '',
@@ -202,17 +140,8 @@ add_action('agreable_app_theme_init', function() {
           array(
               'key' => $key . '_social_icons_background_colour',
               'label' => 'Social Icons Colour',
-              'name' => 'social_icons_background_colour',
+              'name' => $key . '_social_icons_background_colour',
               'type' => 'color_picker',
-              'conditional_logic' => array(
-                  array(
-                      array(
-                          'field' => $key . '_options',
-                          'operator' => '==',
-                          'value' => ''
-                      )
-                  )
-              ),
               'wrapper' => array(
                   'width' => 33.333,
                   'class' => '',
