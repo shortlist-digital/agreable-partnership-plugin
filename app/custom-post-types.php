@@ -52,7 +52,6 @@
     ),
     'map_meta_cap' => true,
     'rewrite' => array(
-      'slug' => 'partnership',
       'with_front' => false
     )
   );
